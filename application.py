@@ -18,14 +18,14 @@ app.secret_key = os.environ.get('FLASK_SECRET_KEY', secrets.token_hex(24))
 
 # Database Configuration (Use environment variables in production!)
 # NOTE: Using 'monkey' and 'tail' credentials as defined in database.sql
-app.config['MYSQL_HOST'] = os.environ.get('MYSQL_HOST', 'localhost')
-app.config['MYSQL_USER'] = os.environ.get('MYSQL_USER', 'root')
-app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD', 'Sathvik@sql')
+app.config['MYSQL_HOST'] = os.environ.get('MYSQL_HOST')
+app.config['MYSQL_USER'] = os.environ.get('MYSQL_USER')
+app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD')
 app.config['MYSQL_DB'] = os.environ.get('MYSQL_DB', 'college')
 
 # Email Configuration (Use App Passwords for security)
-SENDER_EMAIL = os.environ.get('SENDER_EMAIL', "sathvikguntupalli2005@gmail.com")
-SENDER_PASSWORD = os.environ.get('SENDER_PASSWORD', "cdvq qpwa bbyc zirz")
+SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
+SENDER_PASSWORD = os.environ.get('SENDER_PASSWORD')
 MENTOR_EMAIL = os.environ.get('MENTOR_EMAIL', "mentor@college.edu") 
 DEFAULT_MENTOR_ID = os.environ.get('DEFAULT_MENTOR_ID', "F2001") 
 
